@@ -46,7 +46,7 @@
                   <Font name="System Bold" size="26.0" />
                </font>
             </Button>
-            <Label fx:id="wrongLogin" layoutX="109.0" layoutY="472.0" prefHeight="27.0" prefWidth="281.0" textFill="#d12c31">
+            <Label fx:id="wrongLogin" layoutX="53.0" layoutY="472.0" prefHeight="27.0" prefWidth="386.0" textFill="#d12c31">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>

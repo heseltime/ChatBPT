@@ -21,16 +21,19 @@ public class HelloController {
   @FXML
   private PasswordField password;
 
-  protected void sayHello() {
-    wrongLogin.setText("Welcome to JavaFX Application!");
-  }
-
   @FXML
-  protected void userLogin() {
+  protected void userLogin() throws IOException {
     checkLogin();
   }
 
-  private void checkLogin() {
-
+  private void checkLogin() throws IOException {
+    //Main m = new Main();
+    if(username.getText().toString().equals("javacoding") && password.getText().toString().equals("123")) {
+      //wrongLogin.setText("Success!");
+    } else if (username.getText().isEmpty() && password.getText().isEmpty()) {
+      wrongLogin.setText("Please enter your login information");
+    } else {
+      wrongLogin.setText("Wrong username or password");
+    }
   }
 }
