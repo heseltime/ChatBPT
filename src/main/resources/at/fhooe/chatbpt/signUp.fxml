@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="934.0" style="-fx-background-color: #d06c5c;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhooe.chatbpt.SignUp">
+    <left>
+        <AnchorPane prefHeight="771.0" prefWidth="373.0" style="-fx-background-color: fb9c2c;" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="394.0" fitWidth="381.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@bpt-artwork-edited.png" />
+                    </image>
+                </ImageView>
+            </children></AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="771.0" prefWidth="495.0" style="-fx-background-color: #dc4424;" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="username" layoutX="215.0" layoutY="241.0" promptText="Username" />
+                <Label layoutX="53.0" layoutY="235.0" text="Username" textFill="#843028">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font></Label>
+                <Label layoutX="53.0" layoutY="300.0" text="Password" textFill="#843028">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font></Label>
+                <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="149.0">
+                    <image>
+                        <Image url="@heseltime_jack_simple_minimal_logo_of_user_symbol_style_of_Paul_b7b4893b-4fc3-4469-8da3-f43a953811ec.png" />
+                    </image>
+                </ImageView>
+                <PasswordField fx:id="password" layoutX="215.0" layoutY="308.0" promptText="Password" />
+                <Button fx:id="button" layoutX="146.0" layoutY="386.0" mnemonicParsing="false" onAction="#userSignUp" prefHeight="56.0" prefWidth="206.0" style="-fx-background-color: #843028;" text="Create User" textFill="#fffafa">
+                    <font>
+                        <Font name="System Bold" size="26.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+                </Button>
+                <Label fx:id="wrongLogin" layoutX="53.0" layoutY="472.0" prefHeight="27.0" prefWidth="386.0" textFill="#d12c31">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="190.0" layoutY="533.0" onMouseReleased="#takeToLogIn" text="Back to Log In" underline="true">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <effect>
+                        <Glow />
+                    </effect>
+                </Label>
+            <Label layoutX="53.0" layoutY="168.0" text="Full Name" textFill="#843028">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fullName" layoutX="215.0" layoutY="174.0" promptText="Full Name" />
+            </children></AnchorPane>
+    </right>
+</BorderPane>

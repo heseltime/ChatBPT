@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
@@ -12,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="934.0" style="-fx-background-color: #ccccac;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhooe.chatbpt.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="934.0" style="-fx-background-color: #ccccac;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.fhooe.chatbpt.LogIn">
    <left>
       <AnchorPane prefHeight="771.0" prefWidth="373.0" style="-fx-background-color: fb9c2c;" BorderPane.alignment="CENTER">
          <children>
@@ -26,12 +27,12 @@
    <right>
       <AnchorPane prefHeight="771.0" prefWidth="495.0" style="-fx-background-color: #f3ebdb;" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="username" layoutX="208.0" layoutY="208.0" promptText="Username" />
-            <Label layoutX="55.0" layoutY="210.0" text="Username" textFill="#d12c31">
+            <TextField fx:id="username" layoutX="215.0" layoutY="228.0" promptText="Username" />
+            <Label layoutX="53.0" layoutY="222.0" text="Username" textFill="#d12c31">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font></Label>
-            <Label layoutX="55.0" layoutY="275.0" text="Password" textFill="#d12c31">
+            <Label layoutX="53.0" layoutY="287.0" text="Password" textFill="#d12c31">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font></Label>
@@ -40,16 +41,27 @@
                   <Image url="@heseltime_jack_simple_minimal_logo_of_key_style_of_Paul_Rand_cab49e99-7369-4a76-bdd2-a82d17fa9bcd.png" />
                </image>
             </ImageView>
-            <PasswordField fx:id="password" layoutX="208.0" layoutY="273.0" promptText="Password" />
+            <PasswordField fx:id="password" layoutX="215.0" layoutY="295.0" promptText="Password" />
             <Button fx:id="button" layoutX="184.0" layoutY="386.0" mnemonicParsing="false" onAction="#userLogin" prefHeight="48.0" prefWidth="131.0" style="-fx-background-color: #b2937b;" text="Log In" textFill="#fffafa">
                <font>
                   <Font name="System Bold" size="26.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Label fx:id="wrongLogin" layoutX="53.0" layoutY="472.0" prefHeight="27.0" prefWidth="386.0" textFill="#d12c31">
                <font>
                   <Font name="System Bold Italic" size="18.0" />
                </font>
+            </Label>
+            <Label fx:id="signUp" layoutX="218.0" layoutY="533.0" onMouseReleased="#takeToSignUp" text="Sign Up" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Glow />
+               </effect>
             </Label>
          </children></AnchorPane>
    </right>

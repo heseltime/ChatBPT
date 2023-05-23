@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 
 import java.io.IOException;
 
-public class HelloController {
+public class LogIn {
   @FXML
   private Button button;
 
@@ -27,13 +27,21 @@ public class HelloController {
   }
 
   private void checkLogin() throws IOException {
-    //Main m = new Main();
+    ChatBPTApplication app = new ChatBPTApplication();
     if(username.getText().toString().equals("javacoding") && password.getText().toString().equals("123")) {
-      //wrongLogin.setText("Success!");
+      wrongLogin.setText("Success!");
+      //app.changeScene("chat.fxml");
+      app.resetStage("chat.fxml", "ChatBPT - Chat", 1500, 1000);
     } else if (username.getText().isEmpty() && password.getText().isEmpty()) {
       wrongLogin.setText("Please enter your login information");
     } else {
       wrongLogin.setText("Wrong username or password");
     }
+  }
+
+  @FXML
+  protected void takeToSignUp() throws IOException {
+    ChatBPTApplication app = new ChatBPTApplication();
+    app.changeScene("signUp.fxml");
   }
 }

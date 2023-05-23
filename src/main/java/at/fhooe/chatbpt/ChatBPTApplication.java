@@ -8,15 +8,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class ChatBPTApplication extends Application {
   private static Stage stage;
   @Override
   public void start(Stage primaryStage) throws IOException {
     stage = primaryStage;
     primaryStage.setResizable(false);
-    FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+    FXMLLoader fxmlLoader = new FXMLLoader(ChatBPTApplication.class.getResource("logIn.fxml"));
     Scene scene = new Scene(fxmlLoader.load(), 934, 594);
-    stage.setTitle("ChatBPT");
+    stage.setTitle("ChatBPT - Log In");
     stage.setScene(scene);
     stage.show();
   }
@@ -24,6 +24,16 @@ public class HelloApplication extends Application {
   public void changeScene(String fxml) throws IOException {
     Parent pane = FXMLLoader.load(getClass().getResource(fxml));
     stage.getScene().setRoot(pane);
+  }
+
+  public void resetStage(String fxmlFile, String title, int height, int width) throws IOException {
+    stage.close();
+    stage = new Stage();
+    FXMLLoader fxmlLoader = new FXMLLoader(ChatBPTApplication.class.getResource(fxmlFile));
+    Scene scene = new Scene(fxmlLoader.load(), height, width);
+    stage.setTitle(title);
+    stage.setScene(scene);
+    stage.show();
   }
 
   public static void main(String[] args) {
