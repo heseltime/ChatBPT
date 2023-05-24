@@ -1,4 +1,6 @@
+## SWE4 UE5
 
+#### Jack Heseltine, s2110307016, Mai 2023
 
 ### Lösungsidee/Herangehensweise
 
@@ -51,23 +53,30 @@ image::readmeImages/Screenshot 2023-05-22 171534.png[]
 
 Chat, Direct Messaging (erster Screen):
 
-
+image::readmeImages/Screenshot 2023-05-24 140540.png[]
 
 Chat, Group Chats:
 
-
+image::readmeImages/Screenshot 2023-05-24 140558.png[]
 
 Chat, User Settings and Customization:
 
+image::readmeImages/Screenshot 2023-05-24 140617.png[]
 
 
 Chat, App Settings and System Messages:
 
+image::readmeImages/Screenshot 2023-05-24 140631.png[]
 
+Anmerkungen zum Design: Um Komplexität zu sparen wurde auf Kontextmenüs weitgehend verzichtet. Das Design erinnert an etwas aus den 70ern oder 80ern: diese App hat nicht den Anspruch mit WhatsApp o.ä. zu konkurieren, sonder will einfach sein.
+
+Was den Unterschied zwischen User- und App-Settings betrifft bin ich mir noch nicht sicher, momentan stelle ich mir Profilbild-Einstellung und ähnliches unter User-Settings vor, evtl. in App-Settings die Systemnachrichten.
+
+Was den eingeringelten "1"-er betrifft, um neue Nachrichten zu signlaisieren: das ist eigentlich nicht in den Anforderungen und wird vermutlich wieder gestrichen, im Design nur testweise probiert.
 
 ### Testung
 
-Als ausführbares Program auf Übereinstimmung mit Flussplan getestet.
+Als ausführbares Program auf Übereinstimmung mit Flussplan getestet. Geringe Abweichungen zwischen SceneBuilder MockUp und Programm hinsichtlich Schriftgröße im Chat und Textpositionierung im Chat gefunden. Das Positionieren von Texten z.B. nach Eingabe einer neuen Chat-Nachricht wird aber noch programmatisch angegriffen, daher glaube ich nicht, dass diese Abweichung problematisch ist.
 
 Folgender Login ist momentan fest-codiert:
 
