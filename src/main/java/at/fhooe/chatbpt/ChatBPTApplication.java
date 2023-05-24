@@ -10,13 +10,22 @@ import java.io.IOException;
 
 public class ChatBPTApplication extends Application {
   private static Stage stage;
+  private boolean testingChat = true;
   @Override
   public void start(Stage primaryStage) throws IOException {
     stage = primaryStage;
     primaryStage.setResizable(false);
-    FXMLLoader fxmlLoader = new FXMLLoader(ChatBPTApplication.class.getResource("logIn.fxml"));
-    Scene scene = new Scene(fxmlLoader.load(), 934, 594);
-    stage.setTitle("ChatBPT - Log In");
+    Scene scene;
+    if (!testingChat) {
+      FXMLLoader fxmlLoader = new FXMLLoader(ChatBPTApplication.class.getResource("logIn.fxml"));
+      scene = new Scene(fxmlLoader.load(), 934, 594);
+      stage.setTitle("ChatBPT - Log In");
+    } else {
+      FXMLLoader fxmlLoader = new FXMLLoader(ChatBPTApplication.class.getResource("chat.fxml"));
+      scene = new Scene(fxmlLoader.load(), 1061, 702);
+      stage.setTitle("ChatBPT - Chat");
+    }
+
     stage.setScene(scene);
     stage.show();
   }

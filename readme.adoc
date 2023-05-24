@@ -7,7 +7,7 @@ Toolwahl:
 * Scenebuilder
 * Midjourney für Images
 
-Ich dokumentiere das Mockup direkt in Scenebuilder, dazu vorher grundlegen die Idee zum Fluss zwischen den einzelnen Szenen als Graph.
+Ich dokumentiere das Mockup direkt in Scenebuilder, dazu vorher grundlegen die Idee zum Fluss zwischen den einzelnen Szenen als Graph (wird im Folgenden erweitert, an der Stelle "Chat").
 
 image::readmeImages/graphviz.svg[]
 
@@ -17,7 +17,21 @@ Der Graph stellt die Zusammenhänge der folgenden Controller/FXML-Files dar, die
 * SignUp/signUp
 * Chat/chat: fasst erzeugen, beitreten, verbannen (eines Users - Berechtigungskontrolle folgt später dynamisch auf die gleiche Szene), löschen, senden und empfangen (Gruppen- und Privatchat-Funktion), darstellen von Räumen und Nachrichten, darstellen von Verläufen, suchen, anzeigen von Systemnachrichten zusammen, wobei wohl einzelnen Funktionen nur als Button aufrufbar sein werden und die Funktionsweise danach ausgelagert wird.
 
-Chat bezieht Klassen zum Aufbauen sinnvoller Datenstrukturen für die einzelnen Inhalte (User, Nachrichten, Räume) ein, stellt also eine Schnittstelle zwischen UI/Controller und Applikationslogik dar.
+Chat bezieht Klassen zum Aufbauen sinnvoller Datenstrukturen für die einzelnen Inhalte (User, Nachrichten, Räume) ein, stellt also eine Schnittstelle zwischen UI/Controller und Applikationslogik dar. Ich habe mich letztlich entschieden, folgende Einteilung der Funktions-"räume" zu machen, als einzelnen Szenen.
+
+* Chat-Teilkomponenten
+** Direct-Messaging
+** Group-Chats
+** User-Einstellungen/Sonstiges
+** Anwendungseinstellungen
+
+Im ersten Entwurf in der Oberfläche:
+
+image::readmeImages/Screenshot 2023-05-24 101002.png[]
+
+(Über Sign out zurück zur Log In Oberfläche gemäß Zustandsdiagramm.)
+
+Das entspriche m.E. einer sinnvollen Auslagerung der Teilfunktionen gemäß üblicher Chat-Anwendungen.
 
 Die Main-Klasse ChatBPTApplication beinhaltet eine Methode zum Wechseln zwischen Szenen, aber auch eine zum Neuaufstellen der ganzen Stage (die alte wird verworfen): ein Wechsel zwischen Sign Up und Log In ist für mich etwa Szenenwechsel, aber von Log In bzw. Sign Up nach Chat ist Stagewechsel.
 
@@ -35,7 +49,19 @@ Sign Up:
 
 image::readmeImages/Screenshot 2023-05-22 171534.png[]
 
-Chat:
+Chat, Direct Messaging (erster Screen):
+
+
+
+Chat, Group Chats:
+
+
+
+Chat, User Settings and Customization:
+
+
+
+Chat, App Settings and System Messages:
 
 
 
