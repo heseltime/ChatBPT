@@ -21,9 +21,31 @@ public class Chat {
   @FXML
   private PasswordField password;
 
+  // stage change
   @FXML
   protected void takeToLogIn() throws IOException {
     ChatBPTApplication app = new ChatBPTApplication();
     app.resetStage("login.fxml", "ChatBPT - Log In", 934, 594);
+  }
+
+  // scene changes
+  @FXML void takeToChatGroup() throws IOException {
+    ChatBPTApplication app = new ChatBPTApplication();
+    app.changeScene("chatGroup.fxml");
+  }
+
+  @FXML void takeToChat() throws IOException {
+    ChatBPTApplication app = new ChatBPTApplication();
+    app.changeScene("chat.fxml");
+  }
+
+  @FXML void takeToSettingsUser() throws IOException {
+    ChatBPTApplication app = new ChatBPTApplication();
+    app.changeScene("settingsUser.fxml");
+  }
+
+  @FXML void takeToSettings() throws IOException {
+    ChatBPTApplication app = new ChatBPTApplication();
+    app.changeScene("settings.fxml");
   }
 }

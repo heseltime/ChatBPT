@@ -25,24 +25,24 @@
                               <Image url="@bpt-artwork-edited.png" />
                           </image>
                       </ImageView>
-                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="38.0" onMouseReleased="#takeToChat" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@speech-bubble.png" />
+                        <Image url="@speech-bubble-filled.png" />
                      </image>
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
-                  <ImageView fitHeight="38.0" fitWidth="38.0" onMouseReleased="#takeToChatGroup" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@group-filled.png" />
+                        <Image url="@group.png" />
                      </image>
                      <VBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </VBox.margin>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
                   </ImageView>
                   <ImageView fitHeight="38.0" fitWidth="32.0" onMouseReleased="#takeToSettingsUser" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -99,7 +99,7 @@
                      <children>
                         <ImageView fitHeight="81.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@contact.png" />
+                              <Image url="@multiple-chat.png" />
                            </image>
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -107,7 +107,7 @@
                         </ImageView>
                         <VBox prefHeight="101.0" prefWidth="257.0">
                            <children>
-                              <Label text="Mark">
+                              <Label text="Mark + July">
                                  <VBox.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </VBox.margin>
@@ -115,40 +115,7 @@
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="27.0" prefWidth="229.0" text="You: Ok, see you then">
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </VBox>
-                        <Pane prefHeight="101.0" prefWidth="86.0" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #2dbba3;">
-                     <children>
-                        <ImageView fitHeight="81.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@contact.png" />
-                           </image>
-                           <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </HBox.margin>
-                        </ImageView>
-                        <VBox prefHeight="101.0" prefWidth="257.0">
-                           <children>
-                              <Label text="July">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                                 <VBox.margin>
-                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label prefHeight="27.0" prefWidth="229.0" text="Maybe Baby">
+                              <Label prefHeight="27.0" prefWidth="229.0" text="July: Ok, c u">
                                  <VBox.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" />
                                  </VBox.margin>
@@ -165,7 +132,7 @@
                      <children>
                         <ImageView fitHeight="81.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@contact.png" />
+                              <Image url="@multiple-chat.png" />
                            </image>
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -173,7 +140,7 @@
                         </ImageView>
                         <VBox prefHeight="101.0" prefWidth="208.0">
                            <children>
-                              <Label text="Jad">
+                              <Label text="Jad + Baxter + Anthony">
                                  <VBox.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </VBox.margin>
@@ -181,7 +148,7 @@
                                     <Font name="System Bold" size="18.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="27.0" prefWidth="197.0" text="Hey">
+                              <Label prefHeight="27.0" prefWidth="197.0" text="Baxter: I can come">
                                  <VBox.margin>
                                     <Insets bottom="5.0" left="5.0" right="5.0" />
                                  </VBox.margin>
@@ -205,7 +172,7 @@
                   </HBox>
                   <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@add-user.png" />
+                        <Image url="@add-group.png" />
                      </image>
                      <VBox.margin>
                         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -224,10 +191,62 @@
          <children>
             <HBox alignment="CENTER" prefHeight="53.0" prefWidth="576.0" style="-fx-background-color: #e4ece7;">
                <children>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@remove-user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
                   <Label text="Jad" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@remove-user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label text="Baxter" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="150.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@remove-user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label text="Anthony" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
                   </Label>
                   <ImageView fitHeight="150.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -235,6 +254,14 @@
                      </image>
                      <HBox.margin>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@add-user.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -250,12 +277,12 @@
                            <image>
                               <Image url="@contact.png" />
                            </image></ImageView>
-                        <Label alignment="CENTER" layoutX="69.0" layoutY="18.0" style="-fx-background-color: #e4ece7; -fx-background-radius: 10px;" text="Dinner at 8?">
+                        <Label alignment="CENTER" layoutX="69.0" layoutY="18.0" style="-fx-background-color: #e4ece7; -fx-background-radius: 10px;" text="Party at 8?">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <Label alignment="CENTER" layoutX="359.0" layoutY="83.0" style="-fx-background-color: #d5f1ed; -fx-background-radius: 10px;" text="Ok, see you then">
+                        <Label alignment="CENTER" layoutX="445.0" layoutY="83.0" style="-fx-background-color: #d5f1ed; -fx-background-radius: 10px;" text="Can't">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
@@ -265,16 +292,26 @@
                               <Image url="@contact.png" />
                            </image>
                         </ImageView>
-                        <Label alignment="CENTER" layoutX="69.0" layoutY="143.0" style="-fx-background-color: #e4ece7; -fx-background-radius: 10px;" text="Hey">
+                        <Label alignment="CENTER" layoutX="69.0" layoutY="142.0" style="-fx-background-color: #e4ece7; -fx-background-radius: 10px;" text="I can come">
                            <padding>
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                         </Label>
-                        <ImageView fitHeight="60.0" fitWidth="45.0" layoutX="14.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="60.0" fitWidth="45.0" layoutX="14.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@contact.png" />
                            </image>
                         </ImageView>
+                        <Label layoutX="25.0" layoutY="69.0" text="Jad">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="194.0" text="Baxter">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
                      </children>
                   </Pane>
                </content>
